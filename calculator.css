@@ -1,0 +1,15 @@
+.calculator {
+  width: 200px;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.calculator input[type="text"] {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.calculator input[type="button"] {
+  width: 48%;
+  padding: 5px;
+}
