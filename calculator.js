@@ -12,7 +12,17 @@ function calculate() {
   document.getElementById('display').value = result;
 }
 
-// Attach event listeners to the buttons
+function appendToDisplay(value) {
+  var display = document.getElementById('display');
+  var currentValue = display.value;
+  if ((value === '+' || value === '-' || value === '*' || value === '/') &&
+      (currentValue.endsWith('+') || currentValue.endsWith('-') || currentValue.endsWith('*') || currentValue.endsWith('/'))) {
+    return;
+  }
+
+  display.value += value;
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   var buttons = document.querySelectorAll('.calculator input[type="button"]');
   for (var i = 0; i < buttons.length; i++) {
